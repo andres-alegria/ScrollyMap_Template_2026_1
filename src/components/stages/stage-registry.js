@@ -9,6 +9,7 @@
 
 import GalleryHorizontalScroll from "./GalleryHorizontalScroll";
 import GalleryFilter from "./GalleryFilter";
+import GalleryFlipImage from "./GalleryFlipImage";
 import PlainText from "./PlainText";
 import PlainImage from "./PlainImage";
 
@@ -18,6 +19,9 @@ export const STAGES = {
 
   // Gallery + filter UI stage
   GalleryFilter,
+
+  // Horizontal gallery with flip-on-hover cards (mousewheel scroll)
+  GalleryFlipImage,
 
   // Simple text block stage (no map interaction)
   PlainText,
