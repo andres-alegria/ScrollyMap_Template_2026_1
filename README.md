@@ -2,11 +2,6 @@
 
 This repository is a **clean, minimal scrollytelling map template** built with **React**, **Mapbox GL JS**, and **GSAP**.
 
-It is designed for data‑driven storytelling projects where narrative chapters control map camera movements, layers, and optional animations (such as vessel tracks), while also supporting non‑map “stage” sections for rich visual storytelling.
-
-This template intentionally avoids project‑specific logic and legacy hacks. Everything included here is meant to be reusable.
-
-
 ## Core Concepts
 
 ### Chapters (config.js)
@@ -141,32 +136,3 @@ Only enable it when you actually need external data sources.
    ```bash
    yarn start
    ```
-
-
-## Design Philosophy
-
-This template follows a few strict rules:
-
-- No hard‑coded project logic
-- No embedded secrets
-- No legacy callbacks or globals without explanation
-- Everything configurable from `config.js`
-- Stages and animations are opt‑in, not mandatory
-
-If something looks complex, there should be a comment explaining *why it exists* and *when you should touch it*.
-
-
-## Recommended Workflow
-
-- Duplicate this template for each new project
-- Customize only:
-  - `config.js`
-  - stages (if needed)
-  - styles (fonts, colors, layout)
-- Keep the core map and scroll logic unchanged unless absolutely necessary
-
-
----
-
-ScrollyMap Template 2026  
-Clean, explicit, and built to stay that way.
