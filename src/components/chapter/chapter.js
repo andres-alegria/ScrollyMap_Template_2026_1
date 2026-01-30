@@ -83,14 +83,17 @@ function Chapter({
   image,
   images,
   description,
+  content,
+  html,
   currentChapterId,
   legend,
   sources,
   alignment,
   setCurrentChapter,
   setCurrentAction,
-   pinned,
+  pinned,
 }) {
+
  const isStage = type === "stage" && stage;
 const StageComponent = isStage ? STAGES[stage] : null;
  
@@ -182,7 +185,7 @@ const StageComponent = isStage ? STAGES[stage] : null;
       
       {isStage && StageComponent ? (
   <div className="stage-chapter w-full">
-    <StageComponent />
+<StageComponent chapter={{ id, title, description, content, html }} />
   </div>
 ) : (
   <div

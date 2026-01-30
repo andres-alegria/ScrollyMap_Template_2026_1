@@ -70,6 +70,34 @@ export default {
 
 /////////////////////////////////////////////////////////////
 
+// Plain Text
+
+//  html:
+//  <h2>Placeholder heading</h2>
+//  <p>
+//  <strong>Placeholder bold</strong> — Placeholder regular text…
+//  <em>Placeholder italic</em>, Placeholder regular text…
+//  </p> 
+
+{
+  id: "PlainText01",
+  type: "stage",
+  stage: "PlainText",
+  title: "",
+  
+  html:
+`  
+  <p>
+    In June 2025, the Xiang Yang Hang 01, a chalky white vessel loaded with oceanographic equipment, 
+    cruised through the Northwest Pacific until it reached a section of the seafloor rich in polymetallic nodules 
+    — potato-shaped rocks that contain commercially valuable metals such as manganese, nickel, cobalt, and copper. 
+    The ship crisscrossed and zigzagged over the site, conducting research in the area miners would eventually 
+    exploit through deep-sea mining — a controversial industry that could be on the cusp of starting, and that 
+    experts warn could cause irreparable harm to marine ecosystems. 
+  </p>
+`
+},
+
 // Visual01: Pathway of the Xiang Yang Hang 01
 {
   id: "Visual01",
@@ -183,7 +211,6 @@ legend: [
     { callback: "trackAnimation.resume" },
   ]
 },
-
 
 // Visual10b: Da Yang Hao
 

@@ -14,8 +14,25 @@ const Map = (props) => {
   const [map, setMap] = useState(null);
   const mapRef = useRef(null);
   const mapContainerRef = useRef(null);
-  const initialLocation = chapters[0].location;
+
+  // Use the first chapter that actually has a location (so PlainText can be first)
+  const firstChapterWithLocation = chapters.find(
+    (c) =>
+      c &&
+      c.location &&
+      Array.isArray(c.location.center) &&
+      c.location.center.length === 2
+  );
+
+  const initialLocation = firstChapterWithLocation?.location ?? {
+    center: [0, 0],
+    zoom: 1,
+    pitch: 0,
+    bearing: 0
+  };
+
   const [initialLongitude, initialLatitude] = initialLocation.center;
+
   const [markerPosition, setMarkerPosition] = useState({
     latitude: initialLatitude,
     longitude: initialLongitude
