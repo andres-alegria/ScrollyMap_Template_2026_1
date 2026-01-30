@@ -92,6 +92,7 @@ function Chapter({
   setCurrentChapter,
   setCurrentAction,
   pinned,
+  ...stageProps
 }) {
 
  const isStage = type === "stage" && stage;
@@ -184,8 +185,11 @@ const StageComponent = isStage ? STAGES[stage] : null;
       />
       
       {isStage && StageComponent ? (
-  <div className="stage-chapter w-full">
-<StageComponent chapter={{ id, title, description, content, html }} />
+<div className={cx("stage-chapter w-full", theme)}>
+<StageComponent
+  chapter={{ id, title, description, content, html }}
+  {...stageProps}
+/>
   </div>
 ) : (
   <div
